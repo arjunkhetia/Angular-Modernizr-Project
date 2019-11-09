@@ -1,0 +1,1656 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+  <div class="row content">
+    Browser Name - {{ browserName }}
+    <br />
+    Browser Application Name - {{ windowNavigator['appName'] }}
+    <br />
+    Browser Engine Name - {{ windowNavigator['product'] }}
+    <br />
+    Browser Application Code Name - {{ windowNavigator['appCodeName'] }}
+    <br />
+    Browser Version - {{ windowNavigator['appVersion'] }}
+    <br />
+  </div>
+  <div class="row content">
+    <div class="column">
+      <span class="green"> &#10003; </span> - Browser Supported Feature
+    </div>
+    <div class="column">
+      <span class="red"> &#10005; </span> - Browser Unsupported Feature
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.adownload"> &#10003;  a[download] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.adownload"> &#10005; a[download] Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.ambientlight"> &#10003;  Ambient Light Events</span>
+      <span class="invalid" *ngIf="!Modernizr.ambientlight"> &#10005; Ambient Light Events</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.apng"> &#10003;  Animated PNG</span>
+      <span class="invalid" *ngIf="!Modernizr.apng"> &#10005; Animated PNG</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.appearance"> &#10003;  Appearance</span>
+      <span class="invalid" *ngIf="!Modernizr.appearance"> &#10005; Appearance</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.applicationcache"> &#10003;  Application Cache</span>
+      <span class="invalid" *ngIf="!Modernizr.applicationcache"> &#10005; Application Cache</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.arrow"> &#10003;  ES6 Arrow Functions</span>
+      <span class="invalid" *ngIf="!Modernizr.arrow"> &#10005; ES6 Arrow Functions</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.atobbtoa || Modernizr.atob-btoa"> &#10003;  Base 64 encoding/decoding</span>
+      <span class="invalid" *ngIf="!Modernizr.atobbtoa || !Modernizr.atob-btoa"> &#10005; Base 64 encoding/decoding</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.audio"> &#10003;  HTML5 Audio Element</span>
+      <span class="invalid" *ngIf="!Modernizr.audio"> &#10005; HTML5 Audio Element</span>
+      <div *ngIf="Modernizr.audio" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.audio.m4a === 'probably'"> &#10003;  m4a</span>
+        <span *ngIf="Modernizr.audio.m4a === 'maybe'" class="yellow"><strong> ? </strong> m4a</span>
+        <span *ngIf="Modernizr.audio.m4a !== 'maybe' && Modernizr.audio.m4a !== 'probably'" class="invalid"> &#10005; m4a</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.audio.mp3 === 'probably'"> &#10003;  mp3</span>
+        <span *ngIf="Modernizr.audio.mp3 === 'maybe'" class="yellow"><strong> ? </strong> mp3</span>
+        <span *ngIf="Modernizr.audio.mp3 !== 'maybe' && Modernizr.audio.mp3 !== 'probably'" class="invalid"> &#10005; mp3</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.audio.ogg === 'probably'"> &#10003;  ogg</span>
+        <span *ngIf="Modernizr.audio.ogg === 'maybe'" class="yellow"><strong> ? </strong> ogg</span>
+        <span *ngIf="Modernizr.audio.ogg !== 'maybe' && Modernizr.audio.ogg !== 'probably'" class="invalid"> &#10005; ogg</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.audio.opus === 'probably'"> &#10003;  opus</span>
+        <span *ngIf="Modernizr.audio.opus === 'maybe'" class="yellow"><strong> ? </strong> opus</span>
+        <span *ngIf="Modernizr.audio.opus !== 'maybe' && Modernizr.audio.opus !== 'probably'" class="invalid"> &#10005; opus</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.audio.wav === 'probably'"> &#10003;  wav</span>
+        <span *ngIf="Modernizr.audio.wav === 'maybe'" class="yellow"><strong> ? </strong> wav</span>
+        <span *ngIf="Modernizr.audio.wav !== 'maybe' && Modernizr.audio.wav !== 'probably'" class="invalid"> &#10005; wav</span>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.audioloop"> &#10003;  Audio Loop Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.audioloop"> &#10005; Audio Loop Attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.audiopreload"> &#10003;  Audio Preload</span>
+      <span class="invalid" *ngIf="!Modernizr.audiopreload"> &#10005; Audio Preload</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.backdropfilter"> &#10003;  Backdrop Filter</span>
+      <span class="invalid" *ngIf="!Modernizr.backdropfilter"> &#10005; Backdrop Filter</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.backgroundblendmode"> &#10003;  CSS Background Blend Mode</span>
+      <span class="invalid" *ngIf="!Modernizr.backgroundblendmode"> &#10005; CSS Background Blend Mode</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.backgroundcliptext"> &#10003;  CSS Background Clip Text</span>
+      <span class="invalid" *ngIf="!Modernizr.backgroundcliptext"> &#10005; CSS Background Clip Text</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.backgroundsize"> &#10003;  Background Size</span>
+      <span class="invalid" *ngIf="!Modernizr.backgroundsize"> &#10005; Background Size</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.batteryapi || Modernizr.battery-api"> &#10003;  Battery API</span>
+      <span class="invalid" *ngIf="!Modernizr.batteryapi || !Modernizr.battery-api"> &#10005; Battery API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.bdi"> &#10003;  bdi Element</span>
+      <span class="invalid" *ngIf="!Modernizr.bdi"> &#10005; bdi Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.beacon"> &#10003;  Beacon API</span>
+      <span class="invalid" *ngIf="!Modernizr.beacon"> &#10005; Beacon API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.bgpositionshorthand"> &#10003;  Background Position Shorthand</span>
+      <span class="invalid" *ngIf="!Modernizr.bgpositionshorthand"> &#10005; Background Position Shorthand</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.bgpositionxy"> &#10003;  Background Position XY</span>
+      <span class="invalid" *ngIf="!Modernizr.bgpositionxy"> &#10005; Background Position XY</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.bgrepeatround || Modernizr.bgrepeatspace"> &#10003;  Background Repeat</span>
+      <span class="invalid" *ngIf="!Modernizr.bgrepeatround || !Modernizr.bgrepeatspace"> &#10005; Background Repeat</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.bgsizecover"> &#10003;  Background Size Cover</span>
+      <span class="invalid" *ngIf="!Modernizr.bgsizecover"> &#10005; Background Size Cover</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.blobconstructor || Modernizr.blob-constructor"> &#10003;  Blob constructor</span>
+      <span class="invalid" *ngIf="!Modernizr.blobconstructor || !Modernizr.blob-constructor"> &#10005; Blob constructor</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.bloburls"> &#10003;  Blob URLs</span>
+      <span class="invalid" *ngIf="!Modernizr.bloburls"> &#10005; Blob URLs</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.blobworkers"> &#10003;  Workers from Blob URIs</span>
+      <span class="invalid" *ngIf="!Modernizr.blobworkers"> &#10005; Workers from Blob URIs</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.borderimage"> &#10003;  Border Image</span>
+      <span class="invalid" *ngIf="!Modernizr.borderimage"> &#10005; Border Image</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.borderradius"> &#10003;  Border Radius</span>
+      <span class="invalid" *ngIf="!Modernizr.borderradius"> &#10005; Border Radius</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.boxshadow"> &#10003;  Box Shadow</span>
+      <span class="invalid" *ngIf="!Modernizr.boxshadow"> &#10005; Box Shadow</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.boxsizing"> &#10003;  Box Sizing</span>
+      <span class="invalid" *ngIf="!Modernizr.boxsizing"> &#10005; Box Sizing</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.canvas"> &#10003;  Canvas</span>
+      <span class="invalid" *ngIf="!Modernizr.canvas"> &#10005; Canvas</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.canvasblending"> &#10003;  Canvas Blending Support</span>
+      <span class="invalid" *ngIf="!Modernizr.canvasblending"> &#10005; Canvas Blending Support</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.canvastext"> &#10003;  Canvas Text</span>
+      <span class="invalid" *ngIf="!Modernizr.canvastext"> &#10005; Canvas Text</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.canvaswinding"> &#10003;  Canvas Winding Support</span>
+      <span class="invalid" *ngIf="!Modernizr.canvaswinding"> &#10005; Canvas Winding Support</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.capture"> &#10003;  input[capture] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.capture"> &#10005; input[capture] Attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.checked"> &#10003;  CSS :checked pseudo-selector</span>
+      <span class="invalid" *ngIf="!Modernizr.checked"> &#10005; CSS :checked pseudo-selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.classlist"> &#10003;  classList</span>
+      <span class="invalid" *ngIf="!Modernizr.classlist"> &#10005; classList</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.contains"> &#10003;  ES5 String.prototype.contains</span>
+      <span class="invalid" *ngIf="!Modernizr.contains"> &#10005; ES5 String.prototype.contains</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.contenteditable"> &#10003;  Content Editable</span>
+      <span class="invalid" *ngIf="!Modernizr.contenteditable"> &#10005; Content Editable</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.contextmenu"> &#10003;  Context Menus</span>
+      <span class="invalid" *ngIf="!Modernizr.contextmenu"> &#10005; Context Menus</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cookies"> &#10003;  Cookies</span>
+      <span class="invalid" *ngIf="!Modernizr.cookies"> &#10005; Cookies</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cors"> &#10003;  Cross-Origin Resource Sharing</span>
+      <span class="invalid" *ngIf="!Modernizr.cors"> &#10005; Cross-Origin Resource Sharing</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.createelementattrs || Modernizr.createelement-attrs"> &#10003;  createElement with Attributes</span>
+      <span class="invalid" *ngIf="!Modernizr.createelementattrs || !Modernizr.createelement-attrs"> &#10005; createElement with Attributes</span>
+    </td>
+    <td *ngIf="Modernizr.crypto">
+      <span *ngIf="Modernizr.crypto"> &#10003;  Web Cryptography</span>
+      <span class="invalid" *ngIf="!Modernizr.crypto"> &#10005; Web Cryptography</span>
+    </td>
+    <td *ngIf="Modernizr.cryptography">
+      <span *ngIf="Modernizr.cryptography"> &#10003;  Web Cryptography</span>
+      <span class="invalid" *ngIf="!Modernizr.cryptography"> &#10005; Web Cryptography</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssall"> &#10003;  CSS All</span>
+      <span class="invalid" *ngIf="!Modernizr.cssall"> &#10005; CSS All</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssanimations"> &#10003;  CSS Animations</span>
+      <span class="invalid" *ngIf="!Modernizr.cssanimations"> &#10005; CSS Animations</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csscalc"> &#10003;  CSS Calc</span>
+      <span class="invalid" *ngIf="!Modernizr.csscalc"> &#10005; CSS Calc</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.csschunit"> &#10003;  CSS Font ch Units</span>
+      <span class="invalid" *ngIf="!Modernizr.csschunit"> &#10005; CSS Font ch Units</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csscolumns"> &#10003;  CSS Columns</span>
+      <span class="invalid" *ngIf="!Modernizr.csscolumns"> &#10005; CSS Columns</span>
+      <div *ngIf="Modernizr.csscolumns" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.breakafter"> &#10003;  breakafter</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.breakafter" class="invalid"> &#10005; breakafter</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.breakbefore"> &#10003;  breakbefore</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.breakbefore" class="invalid"> &#10005; breakbefore</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.breakinside"> &#10003;  breakinside</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.breakinside" class="invalid"> &#10005; breakinside</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.fill"> &#10003;  fill</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.fill" class="invalid"> &#10005; fill</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.gap"> &#10003;  gap</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.gap" class="invalid"> &#10005; gap</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.rule"> &#10003;  rule</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.rule" class="invalid"> &#10005; rule</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.rulecolor"> &#10003;  rulecolor</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.rulecolor" class="invalid"> &#10005; rulecolor</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.rulestyle"> &#10003;  rulestyle</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.rulestyle" class="invalid"> &#10005; rulestyle</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.rulewidth"> &#10003;  rulewidth</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.rulewidth" class="invalid"> &#10005; rulewidth</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.span"> &#10003;  span</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.span" class="invalid"> &#10005; span</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.csscolumns && Modernizr.csscolumns.width"> &#10003;  width</span>
+        <span *ngIf="Modernizr.csscolumns && !Modernizr.csscolumns.width" class="invalid"> &#10005; width</span>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssescape"> &#10003;  CSS.escape()</span>
+      <span class="invalid" *ngIf="!Modernizr.cssescape"> &#10005; CSS.escape()</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssexunit"> &#10003;  CSS Font ex Units</span>
+      <span class="invalid" *ngIf="!Modernizr.cssexunit"> &#10005; CSS Font ex Units</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssfilters"> &#10003;  CSS Filters</span>
+      <span class="invalid" *ngIf="!Modernizr.cssfilters"> &#10005; CSS Filters</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssgradients"> &#10003;  CSS Gradients</span>
+      <span class="invalid" *ngIf="!Modernizr.cssgradients"> &#10005; CSS Gradients</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssgridlegacy"> &#10003;  CSS Grid (Old)</span>
+      <span class="invalid" *ngIf="!Modernizr.cssgridlegacy"> &#10005; CSS Grid (Old)</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssgrid"> &#10003;  CSS Grid (New)</span>
+      <span class="invalid" *ngIf="!Modernizr.cssgrid"> &#10005; CSS Grid (New)</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csshyphens || Modernizr.softhyphens || Modernizr.softhyphensfind"> &#10003;  CSS Hyphens</span>
+      <span class="invalid" *ngIf="!Modernizr.csshyphens || !Modernizr.softhyphens || !Modernizr.softhyphensfind"> &#10005; CSS Hyphens</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssinvalid"> &#10003;  CSS :invalid pseudo-class</span>
+      <span class="invalid" *ngIf="!Modernizr.cssinvalid"> &#10005; CSS :invalid pseudo-class</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssmask"> &#10003;  CSS Mask</span>
+      <span class="invalid" *ngIf="!Modernizr.cssmask"> &#10005; CSS Mask</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csspointerevents"> &#10003;  CSS Pointer Events</span>
+      <span class="invalid" *ngIf="!Modernizr.csspointerevents"> &#10005; CSS Pointer Events</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.csspositionsticky"> &#10003;  CSS position: sticky</span>
+      <span class="invalid" *ngIf="!Modernizr.csspositionsticky"> &#10005; CSS position: sticky</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.dart"> &#10003;  Dart</span>
+      <span class="invalid" *ngIf="!Modernizr.dart"> &#10005; Dart</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csspseudoanimations"> &#10003;  CSS Generated Content Animations</span>
+      <span class="invalid" *ngIf="!Modernizr.csspseudoanimations"> &#10005; CSS Generated Content Animations</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.csspseudotransitions"> &#10003;  CSS Generated Content Transitions</span>
+      <span class="invalid" *ngIf="!Modernizr.csspseudotransitions"> &#10005; CSS Generated Content Transitions</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssreflections"> &#10003;  CSS Reflections</span>
+      <span class="invalid" *ngIf="!Modernizr.cssreflections"> &#10005; CSS Reflections</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssremunit"> &#10003;  CSS Font rem Units</span>
+      <span class="invalid" *ngIf="!Modernizr.cssremunit"> &#10005; CSS Font rem Units</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssresize"> &#10003;  CSS UI Resize</span>
+      <span class="invalid" *ngIf="!Modernizr.cssresize"> &#10005; CSS UI Resize</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssscrollbar"> &#10003;  CSS Stylable Scrollbars</span>
+      <span class="invalid" *ngIf="!Modernizr.cssscrollbar"> &#10005; CSS Stylable Scrollbars</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csstransforms"> &#10003;  CSS Transforms</span>
+      <span class="invalid" *ngIf="!Modernizr.csstransforms"> &#10005; CSS Transforms</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.csstransforms3d"> &#10003;  CSS Transforms 3D</span>
+      <span class="invalid" *ngIf="!Modernizr.csstransforms3d"> &#10005; CSS Transforms 3D</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csstransformslevel2"> &#10003;  CSS Transforms Level 2</span>
+      <span class="invalid" *ngIf="!Modernizr.csstransformslevel2"> &#10005; CSS Transforms Level 2</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.csstransitions"> &#10003;  CSS Transitions</span>
+      <span class="invalid" *ngIf="!Modernizr.csstransitions"> &#10005; CSS Transitions</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssvalid"> &#10003;  CSS :valid pseudo-class</span>
+      <span class="invalid" *ngIf="!Modernizr.cssvalid"> &#10005; CSS :valid pseudo-class</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssvhunit"> &#10003;  CSS vh unit</span>
+      <span class="invalid" *ngIf="!Modernizr.cssvhunit"> &#10005; CSS vh unit</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssvmaxunit"> &#10003;  CSS vmax unit</span>
+      <span class="invalid" *ngIf="!Modernizr.cssvmaxunit"> &#10005; CSS vmax unit</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.cssvminunit"> &#10003;  CSS vmin unit</span>
+      <span class="invalid" *ngIf="!Modernizr.cssvminunit"> &#10005; CSS vmin unit</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cssvwunit"> &#10003;  CSS vw unit</span>
+      <span class="invalid" *ngIf="!Modernizr.cssvwunit"> &#10005; CSS vw unit</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.cubicbezierrange"> &#10003;  CSS Cubic Bezier Range</span>
+      <span class="invalid" *ngIf="!Modernizr.cubicbezierrange"> &#10005; CSS Cubic Bezier Range</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.customelements"> &#10003;  Custom Elements API</span>
+      <span class="invalid" *ngIf="!Modernizr.customelements"> &#10005; Custom Elements API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.customevent"> &#10003;  Custom Event</span>
+      <span class="invalid" *ngIf="!Modernizr.customevent"> &#10005; Custom Event</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.customprotocolhandler"> &#10003;  Custom Protocol Handler</span>
+      <span class="invalid" *ngIf="!Modernizr.customprotocolhandler"> &#10005; Custom Protocol Handler</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.datachannel"> &#10003;  RTC Data Channel</span>
+      <span class="invalid" *ngIf="!Modernizr.datachannel"> &#10005; RTC Data Channel</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.datalistelem"> &#10003;  Datalist Element</span>
+      <span class="invalid" *ngIf="!Modernizr.datalistelem"> &#10005; Datalist Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.dataset"> &#10003;  Dataset API</span>
+      <span class="invalid" *ngIf="!Modernizr.dataset"> &#10005; Dataset API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.datauri"> &#10003;  Data URI</span>
+      <span class="invalid" *ngIf="!Modernizr.datauri"> &#10005; Data URI</span>
+      <div *ngIf="Modernizr.datauri" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.datauri && Modernizr.datauri.over32kb"> &#10003;  over32kb</span>
+        <span *ngIf="Modernizr.datauri && !Modernizr.datauri.over32kb" class="invalid"> &#10005; over32kb</span>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.dataview"> &#10003;  Data View</span>
+      <span class="invalid" *ngIf="!Modernizr.dataview"> &#10005; Data View</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.dataworkers"> &#10003;  Workers from Data URIs</span>
+      <span class="invalid" *ngIf="!Modernizr.dataworkers"> &#10005; Workers from Data URIs</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.details"> &#10003;  Details Element</span>
+      <span class="invalid" *ngIf="!Modernizr.details"> &#10005; Details Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.devicemotion || Modernizr.deviceorientation"> &#10003;  Orientation and Motion Events</span>
+      <span class="invalid" *ngIf="!Modernizr.devicemotion || !Modernizr.deviceorientation"> &#10005; Orientation and Motion Events</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.displayrunin || Modernizr.display-runin"> &#10003;  CSS Display run-in</span>
+      <span class="invalid" *ngIf="!Modernizr.displayrunin || !Modernizr.display-runin"> &#10005; CSS Display run-in</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.displaytable || Modernizr.display-table"> &#10003;  CSS Display table</span>
+      <span class="invalid" *ngIf="!Modernizr.displaytable || !Modernizr.display-table"> &#10005; CSS Display table</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.documentfragment"> &#10003;  Document Fragment</span>
+      <span class="invalid" *ngIf="!Modernizr.documentfragment"> &#10005; Document Fragment</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.ellipsis"> &#10003;  CSS text-overflow ellipsis</span>
+      <span class="invalid" *ngIf="!Modernizr.ellipsis"> &#10005; CSS text-overflow ellipsis</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.emoji"> &#10003;  Emoji</span>
+      <span class="invalid" *ngIf="!Modernizr.emoji"> &#10005; Emoji</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5"> &#10003;  ES5</span>
+      <span class="invalid" *ngIf="!Modernizr.es5"> &#10005; ES5</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5array"> &#10003;  ES5 Array</span>
+      <span class="invalid" *ngIf="!Modernizr.es5array"> &#10005; ES5 Array</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.es5date"> &#10003;  ES5 Date</span>
+      <span class="invalid" *ngIf="!Modernizr.es5date"> &#10005; ES5 Date</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5function"> &#10003;  ES5 Function</span>
+      <span class="invalid" *ngIf="!Modernizr.es5function"> &#10005; ES5 Function</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5object"> &#10003;  ES5 Object</span>
+      <span class="invalid" *ngIf="!Modernizr.es5object"> &#10005; ES5 Object</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.es5string"> &#10003;  ES5 String</span>
+      <span class="invalid" *ngIf="!Modernizr.es5string"> &#10005; ES5 String</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5syntax"> &#10003;  ES5 Syntax</span>
+      <span class="invalid" *ngIf="!Modernizr.es5syntax"> &#10005; ES5 Syntax</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es5undefined"> &#10003;  ES5 Immutable Undefined</span>
+      <span class="invalid" *ngIf="!Modernizr.es5undefined"> &#10005; ES5 Immutable Undefined</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.es6array"> &#10003;  ES6 Array</span>
+      <span class="invalid" *ngIf="!Modernizr.es6array"> &#10005; ES6 Array</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es6collections"> &#10003;  ES6 Collections</span>
+      <span class="invalid" *ngIf="!Modernizr.es6collections"> &#10005; ES6 Collections</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es6math"> &#10003;  ES6 Math</span>
+      <span class="invalid" *ngIf="!Modernizr.es6math"> &#10005; ES6 Math</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.es6number"> &#10003;  ES6 Number</span>
+      <span class="invalid" *ngIf="!Modernizr.es6number"> &#10005; ES6 Number</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es6object"> &#10003;  ES6 Object</span>
+      <span class="invalid" *ngIf="!Modernizr.es6object"> &#10005; ES6 Object</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.es6string"> &#10003;  ES6 String</span>
+      <span class="invalid" *ngIf="!Modernizr.es6string"> &#10005; ES6 String</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.eventlistener"> &#10003;  Event Listener</span>
+      <span class="invalid" *ngIf="!Modernizr.eventlistener"> &#10005; Event Listener</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.eventsource"> &#10003;  Server Sent Events</span>
+      <span class="invalid" *ngIf="!Modernizr.eventsource"> &#10005; Server Sent Events</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.exiforientation"> &#10003;  EXIF Orientation</span>
+      <span class="invalid" *ngIf="!Modernizr.exiforientation"> &#10005; EXIF Orientation</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.fetch"> &#10003;  Fetch API</span>
+      <span class="invalid" *ngIf="!Modernizr.fetch"> &#10005; Fetch API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.fileinput"> &#10003;  input[file] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.fileinput"> &#10005; input[file] Attribute</span>
+    </td>
+    <td *ngIf="Modernizr.fileinputdirectory">
+      <span *ngIf="Modernizr.fileinputdirectory"> &#10003;  input[directory] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.fileinputdirectory"> &#10005; input[directory] Attribute</span>
+    </td>
+    <td *ngIf="Modernizr.directory">
+      <span *ngIf="Modernizr.directory"> &#10003;  input[directory] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.directory"> &#10005; input[directory] Attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.filereader"> &#10003;  File API</span>
+      <span class="invalid" *ngIf="!Modernizr.filereader"> &#10005; File API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.filesystem"> &#10003;  Filesystem API</span>
+      <span class="invalid" *ngIf="!Modernizr.filesystem"> &#10005; Filesystem API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.flash"> &#10003;  Flash</span>
+      <span class="invalid" *ngIf="!Modernizr.flash"> &#10005; Flash</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.flexbox"> &#10003;  Flexbox</span>
+      <span class="invalid" *ngIf="!Modernizr.flexbox"> &#10005; Flexbox</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.flexboxlegacy"> &#10003;  Flexbox (legacy)</span>
+      <span class="invalid" *ngIf="!Modernizr.flexboxlegacy"> &#10005; Flexbox (legacy)</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.flexboxtweener"> &#10003;  Flexbox (tweener)</span>
+      <span class="invalid" *ngIf="!Modernizr.flexboxtweener"> &#10005; Flexbox (tweener)</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.flexwrap"> &#10003;  Flex Line Wrapping</span>
+      <span class="invalid" *ngIf="!Modernizr.flexwrap"> &#10005; Flex Line Wrapping</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.focuswithin"> &#10003;  CSS :focus-within pseudo-selector</span>
+      <span class="invalid" *ngIf="!Modernizr.focuswithin"> &#10005; CSS :focus-within pseudo-selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.fontface"> &#10003;  @font-face</span>
+      <span class="invalid" *ngIf="!Modernizr.fontface"> &#10005; @font-face</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.forcetouch"> &#10003;  Force Touch Events</span>
+      <span class="invalid" *ngIf="!Modernizr.forcetouch"> &#10005; Force Touch Events</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.formattribute"> &#10003;  input[form] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.formattribute"> &#10005; input[form] Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.formvalidation"> &#10003;  Form Validation</span>
+      <span class="invalid" *ngIf="!Modernizr.formvalidation"> &#10005; Form Validation</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.framed"> &#10003;  Framed Window</span>
+      <span class="invalid" *ngIf="!Modernizr.framed"> &#10005; Framed Window</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.fullscreen"> &#10003;  Fullscreen API</span>
+      <span class="invalid" *ngIf="!Modernizr.fullscreen"> &#10005; Fullscreen API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.gamepads"> &#10003;  GamePad API</span>
+      <span class="invalid" *ngIf="!Modernizr.gamepads"> &#10005; GamePad API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.generatedcontent"> &#10003;  CSS Generated Content</span>
+      <span class="invalid" *ngIf="!Modernizr.generatedcontent"> &#10005; CSS Generated Content</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.generators"> &#10003;  ES6 Generators</span>
+      <span class="invalid" *ngIf="!Modernizr.generators"> &#10005; ES6 Generators</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.geolocation"> &#10003;  Geolocation API</span>
+      <span class="invalid" *ngIf="!Modernizr.geolocation"> &#10005; Geolocation API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.getrandomvalues"> &#10003;  getRandomValues</span>
+      <span class="invalid" *ngIf="!Modernizr.getrandomvalues"> &#10005; getRandomValues</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.getusermedia"> &#10003;  getUserMedia</span>
+      <span class="invalid" *ngIf="!Modernizr.getusermedia"> &#10005; getUserMedia</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.hairline"> &#10003;  CSS Hairline</span>
+      <span class="invalid" *ngIf="!Modernizr.hairline"> &#10005; CSS Hairline</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.hashchange"> &#10003;  Hashchange Event</span>
+      <span class="invalid" *ngIf="!Modernizr.hashchange"> &#10005; Hashchange Event</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.hidden"> &#10003;  [hidden] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.hidden"> &#10005; [hidden] Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.hiddenscroll"> &#10003;  Hidden Scrollbar</span>
+      <span class="invalid" *ngIf="!Modernizr.hiddenscroll"> &#10005; Hidden Scrollbar</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.history"> &#10003;  History API</span>
+      <span class="invalid" *ngIf="!Modernizr.history"> &#10005; History API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.hovermq"> &#10003;  Hover Media Query</span>
+      <span class="invalid" *ngIf="!Modernizr.hovermq"> &#10005; Hover Media Query</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.hsla"> &#10003;  CSS HSLA Colors</span>
+      <span class="invalid" *ngIf="!Modernizr.hsla"> &#10005; CSS HSLA Colors</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.htmlimports"> &#10003;  HTML Imports</span>
+      <span class="invalid" *ngIf="!Modernizr.htmlimports"> &#10005; HTML Imports</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.ie8compat"> &#10003;  IE8 compat mode</span>
+      <span class="invalid" *ngIf="!Modernizr.ie8compat"> &#10005; IE8 compat mode</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.imgcrossorigin"> &#10003;  Image Cross-Origin</span>
+      <span class="invalid" *ngIf="!Modernizr.imgcrossorigin"> &#10005; Image Cross-Origin</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.indexeddb"> &#10003;  IndexedDB</span>
+      <span class="invalid" *ngIf="!Modernizr.indexeddb"> &#10005; IndexedDB</span>
+      <div *ngIf="Modernizr.indexeddb" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.indexeddb && Modernizr.indexeddb.deletedatabase"> &#10003;  deletedatabase</span>
+        <span *ngIf="Modernizr.indexeddb && !Modernizr.indexeddb.deletedatabase" class="invalid"> &#10005; deletedatabase</span>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.inlinesvg"> &#10003;  Inline SVG</span>
+      <span class="invalid" *ngIf="!Modernizr.inlinesvg"> &#10005; Inline SVG</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.input"> &#10003;  Input attributes</span>
+      <span class="invalid" *ngIf="!Modernizr.input"> &#10005; Input attributes</span>
+      <div *ngIf="Modernizr.input" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.autocomplete"> &#10003;  autocomplete</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.autocomplete" class="invalid"> &#10005; autocomplete</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.autofocus"> &#10003;  autofocus</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.autofocus" class="invalid"> &#10005; autofocus</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.list"> &#10003;  list</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.list" class="invalid"> &#10005; list</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.max"> &#10003;  max</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.max" class="invalid"> &#10005; max</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.min"> &#10003;  min</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.min" class="invalid"> &#10005; min</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.multiple"> &#10003;  multiple</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.multiple" class="invalid"> &#10005; multiple</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.pattern"> &#10003;  pattern</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.pattern" class="invalid"> &#10005; pattern</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.placeholder"> &#10003;  placeholder</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.placeholder" class="invalid"> &#10005; placeholder</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.required"> &#10003;  required</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.required" class="invalid"> &#10005; required</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.input && Modernizr.input.step"> &#10003;  step</span>
+        <span *ngIf="Modernizr.input && !Modernizr.input.step" class="invalid"> &#10005; step</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.inputformaction || Modernizr.input-formaction"> &#10003;  Input Formaction</span>
+      <span class="invalid" *ngIf="!Modernizr.inputformaction || !Modernizr.input-formaction"> &#10005; Input Formaction</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.inputformenctype || Modernizr.input-formenctype"> &#10003;  Input Formenctype</span>
+      <span class="invalid" *ngIf="!Modernizr.inputformenctype || !Modernizr.input-formenctype"> &#10005; Input Formenctype</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.inputformtarget || Modernizr.input-formtarget"> &#10003;  Input Formtarget</span>
+      <span class="invalid" *ngIf="!Modernizr.inputformtarget || Modernizr.input-formtarget"> &#10005; Input Formtarget</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.inputformmethod"> &#10003;  Input Formmethod</span>
+      <span class="invalid" *ngIf="!Modernizr.inputformmethod"> &#10005; Input Formmethod</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.inputsearchevent"> &#10003;  Input Search Event</span>
+      <span class="invalid" *ngIf="!Modernizr.inputsearchevent"> &#10005; Input Search Event</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.inputtypes"> &#10003;  Form input types</span>
+      <span class="invalid" *ngIf="!Modernizr.inputtypes"> &#10005; Form input types</span>
+      <div *ngIf="Modernizr.inputtypes" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.color"> &#10003;  color</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.color" class="invalid"> &#10005; color</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.date"> &#10003;  date</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.date" class="invalid"> &#10005; date</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.datetime"> &#10003;  datetime</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.datetime" class="invalid"> &#10005; datetime</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes['datetime-local']"> &#10003;  datetime-local</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes['datetime-local']" class="invalid"> &#10005; datetime-local</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.email"> &#10003;  email</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.email" class="invalid"> &#10005; email</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.month"> &#10003;  month</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.month" class="invalid"> &#10005; month</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.number"> &#10003;  number</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.number" class="invalid"> &#10005; number</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.range"> &#10003;  range</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.range" class="invalid"> &#10005; range</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.search"> &#10003;  search</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.search" class="invalid"> &#10005; search</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.tel"> &#10003;  tel</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.tel" class="invalid"> &#10005; tel</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.time"> &#10003;  time</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.time" class="invalid"> &#10005; time</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.url"> &#10003;  url</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.url" class="invalid"> &#10005; url</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.inputtypes && Modernizr.inputtypes.week"> &#10003;  week</span>
+        <span *ngIf="Modernizr.inputtypes && !Modernizr.inputtypes.week" class="invalid"> &#10005; week</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.intl"> &#10003;  Internationalization API</span>
+      <span class="invalid" *ngIf="!Modernizr.intl"> &#10005; Internationalization API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.jpeg2000"> &#10003;  JPEG 2000</span>
+      <span class="invalid" *ngIf="!Modernizr.jpeg2000"> &#10005; JPEG 2000</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.jpegxr"> &#10003;  JPEG XR (extended range)</span>
+      <span class="invalid" *ngIf="!Modernizr.jpegxr"> &#10005; JPEG XR (extended range)</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.json"> &#10003;  JSON</span>
+      <span class="invalid" *ngIf="!Modernizr.json"> &#10005; JSON</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.lastchild"> &#10003;  CSS :last-child pseudo-selector</span>
+      <span class="invalid" *ngIf="!Modernizr.lastchild"> &#10005; CSS :last-child pseudo-selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.ligatures"> &#10003;  Font Ligatures</span>
+      <span class="invalid" *ngIf="!Modernizr.ligatures"> &#10005; Font Ligatures</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.localizednumber"> &#10003;  input[type="number"] Localization</span>
+      <span class="invalid" *ngIf="!Modernizr.localizednumber"> &#10005; input[type="number"] Localization</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.localstorage"> &#10003;  Local Storage</span>
+      <span class="invalid" *ngIf="!Modernizr.localstorage"> &#10005; Local Storage</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.lowbandwidth"> &#10003;  Low Bandwidth Connection</span>
+      <span class="invalid" *ngIf="!Modernizr.lowbandwidth"> &#10005; Low Bandwidth Connection</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.lowbattery"> &#10003;  Low Battery Level</span>
+      <span class="invalid" *ngIf="!Modernizr.lowbattery"> &#10005; Low Battery Level</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.matchmedia"> &#10003;  Match Media</span>
+      <span class="invalid" *ngIf="!Modernizr.matchmedia"> &#10005; Match Media</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.mathml"> &#10003;  MathML</span>
+      <span class="invalid" *ngIf="!Modernizr.mathml"> &#10005; MathML</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.mediaqueries"> &#10003;  CSS Media Queries</span>
+      <span class="invalid" *ngIf="!Modernizr.mediaqueries"> &#10005; CSS Media Queries</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.messagechannel"> &#10003;  Message Channel</span>
+      <span class="invalid" *ngIf="!Modernizr.messagechannel"> &#10005; Message Channel</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.meter || Modernizr.progressbar"> &#10003;  Progress Element</span>
+      <span class="invalid" *ngIf="!Modernizr.meter || !Modernizr.progressbar"> &#10005; Progress Element</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.microdata"> &#10003;  microdata</span>
+      <span class="invalid" *ngIf="!Modernizr.microdata"> &#10005; microdata</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.multiplebgs"> &#10003;  CSS Multiple Backgrounds</span>
+      <span class="invalid" *ngIf="!Modernizr.multiplebgs"> &#10005; CSS Multiple Backgrounds</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.mutationobserver"> &#10003;  DOM4 Mutation Observer</span>
+      <span class="invalid" *ngIf="!Modernizr.mutationobserver"> &#10005; DOM4 Mutation Observer</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.notification"> &#10003;  Notification</span>
+      <span class="invalid" *ngIf="!Modernizr.notification"> &#10005; Notification</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.nthchild"> &#10003;  CSS :nth-child pseudo-selector</span>
+      <span class="invalid" *ngIf="!Modernizr.nthchild"> &#10005; CSS :nth-child pseudo-selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.objectfit || Modernizr.object-fit"> &#10003;  CSS Object Fit</span>
+      <span class="invalid" *ngIf="!Modernizr.objectfit || !Modernizr.object-fit"> &#10005; CSS Object Fit</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.olreversed"> &#10003;  Reverse Ordered Lists</span>
+      <span class="invalid" *ngIf="!Modernizr.olreversed"> &#10005; Reverse Ordered Lists</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.oninput"> &#10003;  onInput Event</span>
+      <span class="invalid" *ngIf="!Modernizr.oninput"> &#10005; onInput Event</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.opacity"> &#10003;  CSS Opacity</span>
+      <span class="invalid" *ngIf="!Modernizr.opacity"> &#10005; CSS Opacity</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.outputelem"> &#10003;  output Element</span>
+      <span class="invalid" *ngIf="!Modernizr.outputelem"> &#10005; output Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.overflowscrolling"> &#10003;  CSS Overflow Scrolling</span>
+      <span class="invalid" *ngIf="!Modernizr.overflowscrolling"> &#10005; CSS Overflow Scrolling</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.pagevisibility"> &#10003;  Page Visibility API</span>
+      <span class="invalid" *ngIf="!Modernizr.pagevisibility"> &#10005; Page Visibility API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.passiveeventlisteners"> &#10003;  Passive Event Listeners</span>
+      <span class="invalid" *ngIf="!Modernizr.passiveeventlisteners"> &#10005; Passive Event Listeners</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.peerconnection"> &#10003;  RTC Peer Connection</span>
+      <span class="invalid" *ngIf="!Modernizr.peerconnection"> &#10005; RTC Peer Connection</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.performance"> &#10003;  Navigation Timing API</span>
+      <span class="invalid" *ngIf="!Modernizr.performance"> &#10005; Navigation Timing API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.picture"> &#10003;  Picture Element</span>
+      <span class="invalid" *ngIf="!Modernizr.picture"> &#10005; Picture Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.placeholder"> &#10003;  placeholder attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.placeholder"> &#10005; placeholder attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.pointerevents"> &#10003;  DOM Pointer Events API</span>
+      <span class="invalid" *ngIf="!Modernizr.pointerevents"> &#10005; DOM Pointer Events API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.pointerlock"> &#10003;  Pointer Lock API</span>
+      <span class="invalid" *ngIf="!Modernizr.pointerlock"> &#10005; Pointer Lock API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.pointermq"> &#10003;  Pointer Media Query</span>
+      <span class="invalid" *ngIf="!Modernizr.pointermq"> &#10005; Pointer Media Query</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.postmessage"> &#10003;  Post Message</span>
+      <span class="invalid" *ngIf="!Modernizr.postmessage"> &#10005; Post Message</span>
+      <div *ngIf="Modernizr.postmessage" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.postmessage && Modernizr.postmessage.structuredclones"> &#10003;  structuredclones</span>
+        <span *ngIf="Modernizr.postmessage && !Modernizr.postmessage.structuredclones" class="invalid"> &#10005; structuredclones</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.preserve3d"> &#10003;  CSS Transform Style preserve-3d</span>
+      <span class="invalid" *ngIf="!Modernizr.preserve3d"> &#10005; CSS Transform Style preserve-3d</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.promises"> &#10003;  ES6 Promises</span>
+      <span class="invalid" *ngIf="!Modernizr.promises"> &#10005; ES6 Promises</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.proximity"> &#10003;  Proximity API</span>
+      <span class="invalid" *ngIf="!Modernizr.proximity"> &#10005; Proximity API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.queryselector"> &#10003;  Query Selector</span>
+      <span class="invalid" *ngIf="!Modernizr.queryselector"> &#10005; Query Selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.quotamanagement"> &#10003;  Quota Storage Management API</span>
+      <span class="invalid" *ngIf="!Modernizr.quotamanagement"> &#10005; Quota Storage Management API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.raf || Modernizr.requestanimationframe"> &#10003;  Request Animation Frame</span>
+      <span class="invalid" *ngIf="!Modernizr.raf || !Modernizr.requestanimationframe"> &#10005; Request Animation Frame</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.regions"> &#10003;  CSS Regions</span>
+      <span class="invalid" *ngIf="!Modernizr.regions"> &#10005; CSS Regions</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.requestautocomplete"> &#10003;  form#requestAutocomplete()</span>
+      <span class="invalid" *ngIf="!Modernizr.requestautocomplete"> &#10005; form#requestAutocomplete()</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.rgba"> &#10003;  CSS rgba</span>
+      <span class="invalid" *ngIf="!Modernizr.rgba"> &#10005; CSS rgba</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.ruby"> &#10003;  ruby, rp, rt Elements</span>
+      <span class="invalid" *ngIf="!Modernizr.ruby"> &#10005; ruby, rp, rt Elements</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.sandbox"> &#10003;  iframe[sandbox] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.sandbox"> &#10005; iframe[sandbox] Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.scriptasync"> &#10003;  script[async]</span>
+      <span class="invalid" *ngIf="!Modernizr.scriptasync"> &#10005; script[async]</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.scriptdefer"> &#10003;  script[defer]</span>
+      <span class="invalid" *ngIf="!Modernizr.scriptdefer"> &#10005; script[defer]</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.scrollsnappoints"> &#10003;  Scroll Snap Points</span>
+      <span class="invalid" *ngIf="!Modernizr.scrollsnappoints"> &#10005; Scroll Snap Points</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.seamless"> &#10003;  iframe[seamless] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.seamless"> &#10005; iframe[seamless] Attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.serviceworker"> &#10003;  ServiceWorker API</span>
+      <span class="invalid" *ngIf="!Modernizr.serviceworker"> &#10005; ServiceWorker API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.sessionstorage"> &#10003;  Session Storage</span>
+      <span class="invalid" *ngIf="!Modernizr.sessionstorage"> &#10005; Session Storage</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.shapes"> &#10003;  CSS Shapes</span>
+      <span class="invalid" *ngIf="!Modernizr.shapes"> &#10005; CSS Shapes</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.sharedworkers"> &#10003;  Shared Workers</span>
+      <span class="invalid" *ngIf="!Modernizr.sharedworkers"> &#10005; Shared Workers</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.siblinggeneral"> &#10003;  CSS general sibling selector</span>
+      <span class="invalid" *ngIf="!Modernizr.siblinggeneral"> &#10005; CSS general sibling selector</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.sizes"> &#10003;  sizes attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.sizes"> &#10005; sizes attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.smil"> &#10003;  SVG SMIL animation</span>
+      <span class="invalid" *ngIf="!Modernizr.smil"> &#10005; SVG SMIL animation</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.speechrecognition"> &#10003;  Speech Recognition API</span>
+      <span class="invalid" *ngIf="!Modernizr.speechrecognition"> &#10005; Speech Recognition API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.speechsynthesis"> &#10003;  Speech Synthesis API</span>
+      <span class="invalid" *ngIf="!Modernizr.speechsynthesis"> &#10005; Speech Synthesis API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.srcdoc"> &#10003;  iframe[srcdoc] Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.srcdoc"> &#10005; iframe[srcdoc] Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.srcset"> &#10003;  srcset attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.srcset"> &#10005; srcset attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.strictmode"> &#10003;  ES5 Strict Mode</span>
+      <span class="invalid" *ngIf="!Modernizr.strictmode"> &#10005; ES5 Strict Mode</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.stylescoped"> &#10003;  style[scoped]</span>
+      <span class="invalid" *ngIf="!Modernizr.stylescoped"> &#10005; style[scoped]</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.subpixelfont"> &#10003;  CSS Subpixel Fonts</span>
+      <span class="invalid" *ngIf="!Modernizr.subpixelfont"> &#10005; CSS Subpixel Fonts</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.supports"> &#10003;  CSS Supports</span>
+      <span class="invalid" *ngIf="!Modernizr.supports"> &#10005; CSS Supports</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.svg"> &#10003;  SVG</span>
+      <span class="invalid" *ngIf="!Modernizr.svg"> &#10005; SVG</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.svgasimg"> &#10003;  SVG as an Image tag source</span>
+      <span class="invalid" *ngIf="!Modernizr.svgasimg"> &#10005; SVG as an Image tag source</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.svgclippaths"> &#10003;  SVG clip paths</span>
+      <span class="invalid" *ngIf="!Modernizr.svgclippaths"> &#10005; SVG clip paths</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.svgfilters"> &#10003;  SVG filters</span>
+      <span class="invalid" *ngIf="!Modernizr.svgfilters"> &#10005; SVG filters</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.svgforeignobject"> &#10003;  SVG foreignObject</span>
+      <span class="invalid" *ngIf="!Modernizr.svgforeignobject"> &#10005; SVG foreignObject</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.target"> &#10003;  CSS :target pseudo-class</span>
+      <span class="invalid" *ngIf="!Modernizr.target"> &#10005; CSS :target pseudo-class</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.template"> &#10003;  Template Tag</span>
+      <span class="invalid" *ngIf="!Modernizr.template"> &#10005; Template Tag</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.templatestrings"> &#10003;  Template strings</span>
+      <span class="invalid" *ngIf="!Modernizr.templatestrings"> &#10005; Template strings</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.textalignlast"> &#10003;  CSS text-align-last</span>
+      <span class="invalid" *ngIf="!Modernizr.textalignlast"> &#10005; CSS text-align-last</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.textareamaxlength">&#10003; textarea maxlength</span>
+      <span class="invalid" *ngIf="!Modernizr.textareamaxlength">&#10005; textarea maxlength</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.textshadow">&#10003; CSS textshadow</span>
+      <span class="invalid" *ngIf="!Modernizr.textshadow">&#10005; CSS textshadow</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.texttrackapi || Modernizr.track">&#10003; Track element and Timed Text Track</span>
+      <span class="invalid" *ngIf="!Modernizr.texttrackapi || !Modernizr.track">&#10005; Track element and Timed Text Track</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.time">&#10003; time Element</span>
+      <span class="invalid" *ngIf="!Modernizr.time">&#10005; time Element</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.todataurljpeg || Modernizr.todataurlpng || Modernizr.todataurlwebp">&#10003; canvas.toDataURL type support</span>
+      <span class="invalid" *ngIf="!Modernizr.todataurljpeg || !Modernizr.todataurlpng || !Modernizr.todataurlwebp">&#10005; canvas.toDataURL type support</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.touchevents">&#10003; Touch Events</span>
+      <span class="invalid" *ngIf="!Modernizr.touchevents">&#10005; Touch Events</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.transferables">&#10003; Transferables Objects</span>
+      <span class="invalid" *ngIf="!Modernizr.transferables">&#10005; Transferables Objects</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.typedarrays">&#10003; Typed arrays</span>
+      <span class="invalid" *ngIf="!Modernizr.typedarrays">&#10005; Typed arrays</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.unicode">&#10003; Unicode characters</span>
+      <span class="invalid" *ngIf="!Modernizr.unicode">&#10005; Unicode characters</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.unicoderange">&#10003; Unicode Range</span>
+      <span class="invalid" *ngIf="!Modernizr.unicoderange">&#10005; Unicode Range</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.unknownelements">&#10003; Unknown Elements</span>
+      <span class="invalid" *ngIf="!Modernizr.unknownelements">&#10005; Unknown Elements</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.urlparser">&#10003; URL parser</span>
+      <span class="invalid" *ngIf="!Modernizr.urlparser">&#10005; URL parser</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.urlsearchparams">&#10003; URLSearchParams API</span>
+      <span class="invalid" *ngIf="!Modernizr.urlsearchparams">&#10005; URLSearchParams API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.userdata">&#10003; IE User Data API</span>
+      <span class="invalid" *ngIf="!Modernizr.userdata">&#10005; IE User Data API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.userselect">&#10003; CSS user-select</span>
+      <span class="invalid" *ngIf="!Modernizr.userselect">&#10005; CSS user-select</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.variablefonts">&#10003; Variable Open Type Fonts</span>
+      <span class="invalid" *ngIf="!Modernizr.variablefonts">&#10005; Variable Open Type Fonts</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.vibrate">&#10003; Vibration API</span>
+      <span class="invalid" *ngIf="!Modernizr.vibrate">&#10005; Vibration API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.video">&#10003; HTML5 Video</span>
+      <span class="invalid" *ngIf="!Modernizr.video">&#10005; HTML5 Video</span>
+      <div *ngIf="Modernizr.video" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.video.h264 === 'probably'"> &#10003;  h264</span>
+        <span *ngIf="Modernizr.video.h264 === 'maybe'" class="yellow"><strong> ? </strong> h264</span>
+        <span *ngIf="Modernizr.video.h264 !== 'maybe' && Modernizr.video.h264 !== 'probably'" class="invalid"> &#10005; h264</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.video.hls === 'probably'"> &#10003;  hls</span>
+        <span *ngIf="Modernizr.video.hls === 'maybe'" class="yellow"><strong> ? </strong> hls</span>
+        <span *ngIf="Modernizr.video.hls !== 'maybe' && Modernizr.video.hls !== 'probably'" class="invalid"> &#10005; hls</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.video.ogg === 'probably'"> &#10003;  ogg</span>
+        <span *ngIf="Modernizr.video.ogg === 'maybe'" class="yellow"><strong> ? </strong> ogg</span>
+        <span *ngIf="Modernizr.video.ogg !== 'maybe' && Modernizr.video.ogg !== 'probably'" class="invalid"> &#10005; ogg</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.video.vp9 === 'probably'"> &#10003;  vp9</span>
+        <span *ngIf="Modernizr.video.vp9 === 'maybe'" class="yellow"><strong> ? </strong> vp9</span>
+        <span *ngIf="Modernizr.video.vp9 !== 'maybe' && Modernizr.video.vp9 !== 'probably'" class="invalid"> &#10005; vp9</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.video.webm === 'probably'"> &#10003;  webm</span>
+        <span *ngIf="Modernizr.video.webm === 'maybe'" class="yellow"><strong> ? </strong> webm</span>
+        <span *ngIf="Modernizr.video.webm !== 'maybe' && Modernizr.video.webm !== 'probably'" class="invalid"> &#10005; webm</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.videoautoplay">&#10003; Video Autoplay</span>
+      <span class="invalid" *ngIf="!Modernizr.videoautoplay">&#10005; Video Autoplay</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.videocrossorigin">&#10003; Video crossOrigin</span>
+      <span class="invalid" *ngIf="!Modernizr.videocrossorigin">&#10005; Video crossOrigin</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.videoloop">&#10003; Video Loop Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.videoloop">&#10005; Video Loop Attribute</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.videopreload">&#10003; Video Preload Attribute</span>
+      <span class="invalid" *ngIf="!Modernizr.videopreload">&#10005; Video Preload Attribute</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.vml">&#10003; VML</span>
+      <span class="invalid" *ngIf="!Modernizr.vml">&#10005; VML</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webanimations">&#10003; Web Animation API</span>
+      <span class="invalid" *ngIf="!Modernizr.webanimations">&#10005; Web Animation API</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.webaudio">&#10003; Web Audio API</span>
+      <span class="invalid" *ngIf="!Modernizr.webaudio">&#10005; Web Audio API</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webgl">&#10003; WebGL</span>
+      <span class="invalid" *ngIf="!Modernizr.webgl">&#10005; WebGL</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webglextensions">&#10003; WebGL Extensions</span>
+      <span class="invalid" *ngIf="!Modernizr.webglextensions">&#10005; WebGL Extensions</span>
+      <div *ngIf="Modernizr.webglextensions" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.ANGLE_instanced_arrays"> &#10003;  ANGLE_instanced_arrays</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.ANGLE_instanced_arrays" class="invalid"> &#10005; ANGLE_instanced_arrays</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_blend_minmax"> &#10003;  EXT_blend_minmax</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_blend_minmax" class="invalid"> &#10005; EXT_blend_minmax</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_color_buffer_half_float"> &#10003;  EXT_color_buffer_half_float</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_color_buffer_half_float" class="invalid"> &#10005; EXT_color_buffer_half_float</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_disjoint_timer_query"> &#10003;  EXT_disjoint_timer_query</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_disjoint_timer_query" class="invalid"> &#10005; EXT_disjoint_timer_query</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_float_blend"> &#10003;  EXT_float_blend</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_float_blend" class="invalid"> &#10005; EXT_float_blend</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_frag_depth"> &#10003;  EXT_frag_depth</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_frag_depth" class="invalid"> &#10005; EXT_frag_depth</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_sRGB"> &#10003;  EXT_sRGB</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_sRGB" class="invalid"> &#10005; EXT_sRGB</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_shader_texture_lod"> &#10003;  EXT_shader_texture_lod</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_shader_texture_lod" class="invalid"> &#10005; EXT_shader_texture_lod</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.EXT_texture_filter_anisotropic"> &#10003;  EXT_texture_filter_anisotropic</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.EXT_texture_filter_anisotropic" class="invalid"> &#10005; EXT_texture_filter_anisotropic</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_element_index_uint"> &#10003;  OES_element_index_uint</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_element_index_uint" class="invalid"> &#10005; OES_element_index_uint</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_standard_derivatives"> &#10003;  OES_standard_derivatives</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_standard_derivatives" class="invalid"> &#10005; OES_standard_derivatives</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_texture_float"> &#10003;  OES_texture_float</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_texture_float" class="invalid"> &#10005; OES_texture_float</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_texture_float_linear"> &#10003;  OES_texture_float_linear</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_texture_float_linear" class="invalid"> &#10005; OES_texture_float_linear</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_texture_half_float"> &#10003;  OES_texture_half_float</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_texture_half_float" class="invalid"> &#10005; OES_texture_half_float</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_texture_half_float_linear"> &#10003;  OES_texture_half_float_linear</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_texture_half_float_linear" class="invalid"> &#10005; OES_texture_half_float_linear</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.OES_vertex_array_object"> &#10003;  OES_vertex_array_object</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.OES_vertex_array_object" class="invalid"> &#10005; OES_vertex_array_object</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_color_buffer_float"> &#10003;  WEBGL_color_buffer_float</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_color_buffer_float" class="invalid"> &#10005; WEBGL_color_buffer_float</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_compressed_texture_s3tc"> &#10003;  WEBGL_compressed_texture_s3tc</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_compressed_texture_s3tc" class="invalid"> &#10005; WEBGL_compressed_texture_s3tc</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_compressed_texture_s3tc_srgb"> &#10003;  WEBGL_compressed_texture_s3tc_srgb</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_compressed_texture_s3tc_srgb" class="invalid"> &#10005; WEBGL_compressed_texture_s3tc_srgb</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_debug_renderer_info"> &#10003;  WEBGL_debug_renderer_info</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_debug_renderer_info" class="invalid"> &#10005; WEBGL_debug_renderer_info</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_debug_shaders"> &#10003;  WEBGL_debug_shaders</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_debug_shaders" class="invalid"> &#10005; WEBGL_debug_shaders</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_depth_texture"> &#10003;  WEBGL_depth_texture</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_depth_texture" class="invalid"> &#10005; WEBGL_depth_texture</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_draw_buffers"> &#10003;  WEBGL_draw_buffers</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_draw_buffers" class="invalid"> &#10005; WEBGL_draw_buffers</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBGL_lose_context"> &#10003;  WEBGL_lose_context</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBGL_lose_context" class="invalid"> &#10005; WEBGL_lose_context</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBKIT_EXT_texture_filter_anisotropic"> &#10003;  WEBKIT_EXT_texture_filter_anisotropic</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBKIT_EXT_texture_filter_anisotropic" class="invalid"> &#10005; WEBKIT_EXT_texture_filter_anisotropic</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBKIT_WEBGL_compressed_texture_s3tc"> &#10003;  WEBKIT_WEBGL_compressed_texture_s3tc</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBKIT_WEBGL_compressed_texture_s3tc" class="invalid"> &#10005; WEBKIT_WEBGL_compressed_texture_s3tc</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBKIT_WEBGL_depth_texture"> &#10003;  WEBKIT_WEBGL_depth_texture</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBKIT_WEBGL_depth_texture" class="invalid"> &#10005; WEBKIT_WEBGL_depth_texture</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webglextensions && Modernizr.webglextensions.WEBKIT_WEBGL_lose_context"> &#10003;  WEBKIT_WEBGL_lose_context</span>
+        <span *ngIf="Modernizr.webglextensions && !Modernizr.webglextensions.WEBKIT_WEBGL_lose_context" class="invalid"> &#10005; WEBKIT_WEBGL_lose_context</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.webintents">&#10003; Web Intents</span>
+      <span class="invalid" *ngIf="!Modernizr.webintents">&#10005; Web Intents</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webp">&#10003; Webp</span>
+      <span class="invalid" *ngIf="!Modernizr.webp">&#10005; Webp</span>
+      <div *ngIf="Modernizr.webp" class="childdiv">
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webp && Modernizr.webp.alpha"> &#10003;  alpha</span>
+        <span *ngIf="Modernizr.webp && !Modernizr.webp.alpha" class="invalid"> &#10005; alpha</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webp && Modernizr.webp.animation"> &#10003;  animation</span>
+        <span *ngIf="Modernizr.webp && !Modernizr.webp.animation" class="invalid"> &#10005; animation</span>
+        <br />
+        <span class="arrowspan">&#8627;</span>
+        <span *ngIf="Modernizr.webp && Modernizr.webp.lossless"> &#10003;  lossless</span>
+        <span *ngIf="Modernizr.webp && !Modernizr.webp.lossless" class="invalid"> &#10005; lossless</span>
+      </div>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webpalpha">&#10003; Webp Alpha</span>
+      <span class="invalid" *ngIf="!Modernizr.webpalpha">&#10005; Webp Alpha</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.webpanimation">&#10003; Webp Animation</span>
+      <span class="invalid" *ngIf="!Modernizr.webpanimation">&#10005; Webp Animation</span>
+    </td>
+    <td *ngIf="Modernizr.webplossless">
+      <span *ngIf="Modernizr.webplossless">&#10003; Webp Lossless</span>
+      <span class="invalid" *ngIf="!Modernizr.webplossless">&#10005; Webp Lossless</span>
+    </td>
+    <td *ngIf="Modernizr.webp-lossless">
+      <span *ngIf="Modernizr.webp-lossless">&#10003; Webp Lossless</span>
+      <span class="invalid" *ngIf="!Modernizr.webp-lossless">&#10005; Webp Lossless</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.websockets">&#10003; WebSockets Support</span>
+      <span class="invalid" *ngIf="!Modernizr.websockets">&#10005; WebSockets Support</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.websocketsbinary">&#10003; Binary WebSockets</span>
+      <span class="invalid" *ngIf="!Modernizr.websocketsbinary">&#10005; Binary WebSockets</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.websqldatabase">&#10003; Web SQL Database</span>
+      <span class="invalid" *ngIf="!Modernizr.websqldatabase">&#10005; Web SQL Database</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.webworkers">&#10003; Web Workers</span>
+      <span class="invalid" *ngIf="!Modernizr.webworkers">&#10005; Web Workers</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.willchange">&#10003; will-change</span>
+      <span class="invalid" *ngIf="!Modernizr.willchange">&#10005; will-change</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.wrapflow">&#10003; CSS wrap-flow</span>
+      <span class="invalid" *ngIf="!Modernizr.wrapflow">&#10005; CSS wrap-flow</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.xdomainrequest">&#10003; XDomainRequest</span>
+      <span class="invalid" *ngIf="!Modernizr.xdomainrequest">&#10005; XDomainRequest</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.xhr2">&#10003; XML HTTP Request Level 2 XHR2</span>
+      <span class="invalid" *ngIf="!Modernizr.xhr2">&#10005; XML HTTP Request Level 2 XHR2</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetype">&#10003; XHR responseType</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetype">&#10005; XHR responseType</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetypearraybuffer">&#10003; XHR responseType='arraybuffer'</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetypearraybuffer">&#10005; XHR responseType='arraybuffer'</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetypeblob">&#10003; XHR responseType='blob'</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetypeblob">&#10005; XHR responseType='blob'</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetypedocument">&#10003; XHR responseType='document'</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetypedocument">&#10005; XHR responseType='document'</span>
+    </td>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetypejson">&#10003; XHR responseType='json'</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetypejson">&#10005; XHR responseType='json'</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span *ngIf="Modernizr.xhrresponsetypetext">&#10003; XHR responseType='text'</span>
+      <span class="invalid" *ngIf="!Modernizr.xhrresponsetypetext">&#10005; XHR responseType='text'</span>
+    </td>
+    <td>
+      <!-- <span *ngIf="Modernizr.ambientlight">&#10003; </span>
+      <span class="invalid" *ngIf="!Modernizr.ambientlight">&#10005; </span> -->
+    </td>
+    <td>
+
+    </td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
