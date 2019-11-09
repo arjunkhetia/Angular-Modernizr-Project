@@ -1,0 +1,54 @@
+table {
+	border: 1px solid #ddd;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+td {
+	border: 1px solid #ddd;
+	text-align: left;
+	padding: 15px;
+	color: green;
+	font-size: 20px;
+}
+th {
+	border: 1px solid #ddd;
+	text-align: left;
+	padding: 15px;
+	color: green;
+	font-size: 20px;
+}
+.invalid {
+	color: red;
+}
+.column {
+	float: left;
+	width: 50%;
+}
+.row {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.content {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+.childdiv {
+	margin-top: -20px;
+}
+.arrowspan {
+	color: black;
+	padding-left: 5px;
+}
+.green {
+	color: green;
+}
+.yellow {
+	color: #b08800;
+}
+.red {
+	color: red;
+}
